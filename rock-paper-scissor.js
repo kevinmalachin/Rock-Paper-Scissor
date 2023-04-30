@@ -34,9 +34,7 @@ console.log(computerSelection());
 
 // determines the round esit
 
-
-
-const playRound = (playerSelection, computerSelection) => {
+function checkWinner(computerSelection, playerSelection){
     if (computerSelection === playerSelection) {
         console.log(`${playerSelection} vs. ${computerSelection}. It's a tie!`);
     } else if (
@@ -52,4 +50,6 @@ const playRound = (playerSelection, computerSelection) => {
     };
 };
 
-let result = playRound();
+
+
+// store the result on the page
