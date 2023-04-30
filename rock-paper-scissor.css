@@ -1,0 +1,97 @@
+/** {
+    border: 2px solid red;
+  }
+  */
+
+  body {
+    margin: 0;
+    /*background-color: #b1b1b1; */
+  }
+
+.Firshalf {
+    background-color: #b1b1b1;
+    display: flex;
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: cornflowerblue;
+    background-color: #1F2937;
+    height: 11%;
+}
+
+.RockPaperScissor {
+    display: flex;
+    position: relative;
+    background-color: #b1b1b1;
+    height: 50%;
+    justify-content: center;
+}
+
+.RockPaperScissor h3 {
+    text-align: center;
+}
+
+.RockPaperScissor button {
+    position: relative;
+    border: 2px solid #e8e8e8;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #212121;
+    font-size: small;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 5px 5px #888888;
+    color: #e8e8e8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 25%;
+    width: 15%;
+    top: 35%;
+}
+
+.Second-half {
+    display: flex;
+    justify-content: space-around;
+}
+
+.player {
+    font-family: monospace;
+    font-size: 1.5rem;
+    color: #FAFAFA;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 2px solid #FAFAFA;
+    background: #888888d5;
+    box-shadow: 3px 3px #fafafa;
+    cursor: pointer;
+    margin: 35px 0;
+    height: 150px;
+  }
+
+
+  .Computer {
+    font-family: monospace;
+    font-size: 1.5rem;
+    color: #FAFAFA;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 2px solid #FAFAFA;
+    background: #888888d5;
+    box-shadow: 3px 3px #fafafa;
+    cursor: pointer;
+    margin: 35px 0;
+    height: 150px;
+  }
+
+/* Pseudo class */
+
+button:active {
+    box-shadow: none;
+    transform: translate(3px, 3px);
+  }
