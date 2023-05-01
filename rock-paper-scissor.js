@@ -1,5 +1,7 @@
 // create variables
 
+const button = document.querySelector('#idPcTurn');
+
 const rpg = ['rock', 'paper', 'scissors'];
 
 let playerScore = 0;
@@ -20,7 +22,7 @@ function playerSelection(){
 
 console.log(playerSelection());
 
-    function computerSelection(){
+function computerSelection(){
     let computerPick = Math.floor(Math.random() * 3) + 1;
         if(computerPick === 1) {
             console.log('rock');
@@ -30,7 +32,8 @@ console.log(playerSelection());
             console.log('scissor');
         }
 };
-console.log(computerSelection());
+
+
 
 // determines the round esit
 
