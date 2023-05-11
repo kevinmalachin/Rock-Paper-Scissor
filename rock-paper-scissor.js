@@ -69,6 +69,13 @@ function checkWinner() {
         computerTotal.innerHTML = computerScore;        // counting computer victories
 
         resultsDiplay.innerHTML = results               // assign the result to the HTML
-};
 
-// now we check who wins on five rounds
+
+        // now we check who wins on five rounds
+
+        if(playerScore === 5){
+            playerTotal.innerHTML = "YOU WON!"
+        } else if(computerScore === 5){
+            computerTotal.innerHTML = "Oh no! You LOST"
+            }
+};
