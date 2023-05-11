@@ -4,8 +4,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rock Paper Scissor</title>
-  <link href='./rock-paper-scissor.css' rel='stylesheet'>
-  <script src="./rock-paper-scissor.js"></script>
+  <link href='rock-paper-scissor.css' rel='stylesheet'>
 </head>
 
 
@@ -15,24 +14,29 @@
       <h1>Rock Paper Scissor</h1>
     </div>
     <div class="RockPaperScissor">
-      
-       <button onClick="playerSelection()" id="idMyTurn">Your Turn</button>
-       <button onClick="computerSelection()" id="idPcTurn">Computer Turn</button>
-       <button onClick="checkWinner()" id="idResults">Result</button>
+
+      <button id="Rock">Rock</button>
+      <button id="Paper">Paper</button>
+      <button id="Scissors">Scissors</button>
+
+    </div>
   </div>
+    <div class="results">
 
-  <div class="Second-Half">
+      <h1><span id="computerChoice">Computer Choice</span></h1>
+      <h1><span id="results">Results</span></h1>
 
-    <button class="player">
-      Player Results
-  </button>
+    </div>
+  
+  <div class="SecondHalf">
 
-  <button class="Computer">
-    Computer Results
-</button>
- 
 
-  </div>
+      <h1><span id="player">Player Result</span></h1>
+      <h1><span id="computer">Computer Results</span></h1>
 
+    </div>
+
+
+  <script src="rock-paper-scissor.js"></script>
 </body>
 </html>

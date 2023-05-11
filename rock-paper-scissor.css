@@ -23,24 +23,68 @@
 }
 
 .RockPaperScissor {
-    display: flex;
     position: relative;
     background-color: #b1b1b1;
-    height: 50%;
-    justify-content: center;
+    height: 30%;
 }
 
-.RockPaperScissor h3 {
+.RockPaperScissor h1 {
     text-align: center;
 }
 
 .RockPaperScissor button {
+    display: block;
+    position: relative;
+    border: 2px solid #e8e8e8;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #5F9EA0;
+    font-size: larger;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 5px 5px #888888;
+    color: #e8e8e8;
+    align-items: center;
+    height: 30%;
+    width: 15%;
+}
+
+.results {
+    background-color: #b1b1b1;
+    display: flex;
+    justify-content: space-around;
+}
+
+.results h1 {
     position: relative;
     border: 2px solid #e8e8e8;
     padding: 15px;
     border-radius: 10px;
     background-color: #212121;
-    font-size: small;
+    font-size: larger;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 5px 5px #888888;
+    color: #e8e8e8;
+    align-items: center;
+    height: 15%;
+    width: 15%;
+}
+
+.SecondHalf {
+    display: flex;
+    background-color: lightslategray;
+    height: 50%;
+    justify-content: space-around;
+}
+
+.SecondHalf h1 {
+    position: relative;
+    border: 2px solid #e8e8e8;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #6495ED;
+    font-size: larger;
     font-weight: bold;
     text-align: center;
     box-shadow: 5px 5px #888888;
@@ -53,45 +97,7 @@
     top: 35%;
 }
 
-.Second-half {
-    display: flex;
-    justify-content: space-around;
-}
 
-.player {
-    font-family: monospace;
-    font-size: 1.5rem;
-    color: #FAFAFA;
-    text-transform: uppercase;
-    padding: 10px 20px;
-    border-radius: 10px;
-    border: 2px solid #FAFAFA;
-    background: #888888d5;
-    box-shadow: 3px 3px #fafafa;
-    cursor: pointer;
-    margin: 35px 0;
-    height: 150px;
-  }
-
-
-  .Computer {
-    font-family: monospace;
-    font-size: 1.5rem;
-    color: #FAFAFA;
-    text-transform: uppercase;
-    padding: 10px 20px;
-    border-radius: 10px;
-    border: 2px solid #FAFAFA;
-    background: #888888d5;
-    box-shadow: 3px 3px #fafafa;
-    cursor: pointer;
-    margin: 35px 0;
-    height: 150px;
-  }
 
 /* Pseudo class */
 
-button:active {
-    box-shadow: none;
-    transform: translate(3px, 3px);
-  }

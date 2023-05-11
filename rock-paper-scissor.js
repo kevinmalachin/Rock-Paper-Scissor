@@ -1,58 +1,74 @@
-// create variables
+// get the elements and variables
 
-const button = document.querySelector('#idPcTurn');
+const playerChoiceDisplay = document.getElementById('playerChoice');
+const computerChoiceDisplay = document.getElementById('computerChoice');
+const resultsDiplay = document.getElementById('results');
+const possibleChoices = document.querySelectorAll('button');
+let playerTotal = document.getElementById('player');
+let computerTotal = document.getElementById('computer');
+let userChoice;
+let computerChoice;
+let results;
 
-const rpg = ['rock', 'paper', 'scissors'];
+
+// assign a score
 
 let playerScore = 0;
 let computerScore = 0;
 
-// player and computer
 
+// player
 
-function playerSelection(){
-    let input = prompt("Pick your choice!").toLocaleLowerCase();
-    if(input==="scissor" || input==="paper" || input==="rock") {
-        document.getElementById("idMyTurn").innerHTML = `Your pick is ${input}!`;
-    } else if (input != "rock" || input != "scissor" || input != "paper"){
-        alert("You must pick Rock, Paper or Scissor");
-    }
-    console.log(input);
+possibleChoices.forEach(possibleChoice => possibleChoice.addEventListener('click', e => {
+    e.preventDefault();
+
+    userChoice = e.target.id
+    computerPick()                                   // function for the computer pick
+    checkWinner()                                    // function to check who win the round
+}));
+
+// random pick by computer
+
+function computerPick() {
+    const randomPick = Math.floor(Math.random() * 3);
+ 
+     switch(randomPick){
+         case 0:
+            computerChoice = "Rock";
+            break; 
+         case 1:
+            computerChoice = "Paper";
+            break;
+         case 2:
+            computerChoice = "Scissors";
+            break;
+     }
+
+     computerChoiceDisplay.innerText = `Computer pick : ${computerChoice}`         // assign the result to the HTML
+     
 };
 
-console.log(playerSelection());
+// play the game = results
 
-function computerSelection(){
-    let computerPick = Math.floor(Math.random() * 3) + 1;
-        if(computerPick === 1) {
-            console.log('rock');
-        } else if (computerPick === 2) {
-            console.log('paper');
-        } else if (computerPick === 3) {
-            console.log('scissor');
-        }
-};
-
-
-
-// determines the round esit
-
-function checkWinner(computerSelection, playerSelection){
-    if (computerSelection === playerSelection) {
-        console.log(`${playerSelection} vs. ${computerSelection}. It's a tie!`);
+function checkWinner() {
+    if (userChoice === computerChoice) {
+        results = "It's a tie!"
     } else if (
-        (computerSelection === 'rock' && playerSelection === 'scissors') ||
-        (computerSelection === 'paper' && playerSelection === 'rock') ||
-        (computerSelection === 'scissors' && playerSelection === 'paper')
-    ) {
-        console.log(`${playerSelection} vs. ${computerSelection}. You lose! Try again next time.`);
-        computerScore++;
-    } else {
-        console.log(`${playerSelection} vs. ${computerSelection}. You win!`);
+        (userChoice === 'Rock' && computerChoice === 'Scissors') ||
+        (userChoice === 'Paper' && computerChoice === 'Rock') ||
+        (userChoice === 'Scissors' && computerChoice === 'Paper')
+     ) {
+        results = "You Win!"
         playerScore++;
-    };
+    } else {
+        results = "You lose! Try again next time!"
+        computerScore++;
+    }
+
+        playerTotal.innerHTML = playerScore;            // counting player victories
+        computerTotal.innerHTML = computerScore;        // counting computer victories
+
+        resultsDiplay.innerHTML = results               // assign the result to the HTML
 };
 
-
-
-// store the result on the page
+// now we check who wins on five rounds
