@@ -75,7 +75,11 @@ function checkWinner() {
 
         if(playerScore === 5){
             playerTotal.innerHTML = "YOU WON!"
+            playerScore = 0;
+            computerScore = 0;
         } else if(computerScore === 5){
             computerTotal.innerHTML = "Oh no! You LOST"
+            playerScore = 0;
+            computerScore = 0;
             }
 };

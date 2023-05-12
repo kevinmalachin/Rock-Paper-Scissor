@@ -25,7 +25,9 @@
 .RockPaperScissor {
     position: relative;
     background-color: #b1b1b1;
-    height: 30%;
+    height: 40%;
+    display: flex;
+    justify-content: space-around;
 }
 
 .RockPaperScissor h1 {
@@ -45,8 +47,8 @@
     box-shadow: 5px 5px #888888;
     color: #e8e8e8;
     align-items: center;
-    height: 30%;
-    width: 15%;
+    height: 50%;
+    width: 25%;
 }
 
 .results {
